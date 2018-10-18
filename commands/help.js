@@ -2,7 +2,7 @@ module.exports.run = (bot, message, args, Discord) => {
 let emb = new Discord.RichEmbed()
 .setTitle("Bane Help System")
 .setDescription("Hello there!!")
-.addField("Coming Soon", "The devs are still working on commands")
+.addField("Command lists", "Fun \nUtilty \nModeration")
 
 message.channel.send({embed: emb})
 }
