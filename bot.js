@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const config = require("./config.json");
 const fs = require("fs");
-var prefix = ".";
+var prefix = "b!";
 
 bot.commands = new discord.Collection()
 
