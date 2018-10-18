@@ -15,6 +15,12 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
+bot.on('ready', () => {
+  bot.user.setActivity("Hello!")
+  console.log("I'm alive!")
+
+})
+
 bot.on('message', message => {
   let mArray = message.content.split(" ")
   let args = mArray.slice(1)
