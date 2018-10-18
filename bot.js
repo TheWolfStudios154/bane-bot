@@ -23,8 +23,7 @@ bot.on('message', message => {
   if (message.channel.type == "dm") return;
   if (!message.content.startsWith(prefix)) return;
   if (cmd) {
-    if (config.ubl.includes(message.author.id)) return;
-    cmd.run(bot, message, args, discord)
+    cmd.run(bot, message, args, Discord)
 console.log(`${message.author.username} used the ${message.content.split(" ")[0]} command.`)
   }
 })
