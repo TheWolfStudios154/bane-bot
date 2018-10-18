@@ -4,7 +4,7 @@ const config = require("./config.json");
 const fs = require("fs");
 var prefix = "b!";
 
-bot.commands = new discord.Collection()
+bot.commands = new Discord.Collection()
 
 
 fs.readdir("./commands/", (err, files) => {
