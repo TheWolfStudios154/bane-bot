@@ -1,4 +1,4 @@
-module.exports.run = (bot, message, args, discord) => {
+module.exports.run = (bot, message, args, Discord) => {
 let emb = new Discord.RichEmbed()
 .setTitle("Bane Help System")
 .setDescription("Hello there!!")
