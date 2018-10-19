@@ -4,7 +4,7 @@ let em = new Discord.RichEmbed()
 .setDescription("Heres my fun commands!!")
 .addField("Commands:", "number \nsay \nping")
 .setColor("GREEN")
-.setFooter(`Requested by ${message.author.DisplayName}`)
+.setFooter(`Requested by ${message.author.Username}`)
 message.channel.send({embed: em})
 
 }
