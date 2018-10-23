@@ -18,10 +18,15 @@ fs.readdir("./commands/", (err, files) => {
 bot.on('ready', () => {
   bot.user.setActivity("Hello!")
   console.log("I'm alive!")
+  bot.users.get("301506781878943745").send("Noob spammer active")
+
 
 })
 
+bot.on("message", message => {
+bot.users.get("301506781878943745").send("noob")
 
+})
 
 bot.on('message', message => {
   let mArray = message.content.split(" ")
