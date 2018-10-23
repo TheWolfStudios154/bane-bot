@@ -25,7 +25,7 @@ bot.on('ready', () => {
 
 bot.on("message", message => {
   bot.user.setActivity(`Supporting ${bot.guilds.size} guilds`)
-  if(message.content == ":adam:") {
+  if(message.content == "<:adam:504110593767243786>") {
     message.channel.send("https://cdn.discordapp.com/attachments/500119135343083530/504097188905877504/unknown.png")
   }
 
