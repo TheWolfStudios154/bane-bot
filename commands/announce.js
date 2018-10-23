@@ -5,14 +5,14 @@ const config = require(`../config.json`);
 function sendAnnounce(bot, message, args, guild) {
   var sendChannel = "";
   
-  if (guild.channels.find("name", "general")) {
-    sendChannel = guild.channels.find("name", "general");
+  if (guild.channels.find("name", "announcements")) {
+    sendChannel = guild.channels.find("name", "announcements");
   } else if (guild.channels.find("name", "chat")) {
     sendChannel = guild.channels.find("name", "chat");
   } else if (guild.channels.find("name", "lounge")) {
     sendChannel = guild.channels.find("name", "lounge");
-  } else if (guild.channels.find("name", "announcements")) {
-    sendChannel = guild.channels.find("name", "announcements");
+  } else if (guild.channels.find("name", "general")) {
+    sendChannel = guild.channels.find("name", "general");
   }
 
   let announce = new discord.RichEmbed()
