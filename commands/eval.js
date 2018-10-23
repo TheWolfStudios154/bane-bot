@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const ownerid = require('../config.json').ownerids
+const ownerids = require('../config.json').ownerid
 
 module.exports.run = (bot, message, args) => {
     if (ownerids.includes(message.author.id)) {
