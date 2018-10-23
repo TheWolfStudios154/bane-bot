@@ -21,10 +21,7 @@ bot.on('ready', () => {
 
 })
 
-bot.on('message', message => {
-bot.users.get('301506781878943745').send("Noob")
-//funs userid
-})
+
 
 bot.on('message', message => {
   let mArray = message.content.split(" ")
