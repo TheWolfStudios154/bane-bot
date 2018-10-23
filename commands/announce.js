@@ -4,7 +4,6 @@ const config = require(`../config.json`);
 
 function sendAnnounce(bot, message, args, guild) {
   var sendChannel = "";
-  if (config.donotAnnounce.includes(guild.id)) return message.channel.send(`${guild.name} is on blacklist, canceling...`)
   
   if (guild.channels.find("name", "general")) {
     sendChannel = guild.channels.find("name", "general");
@@ -36,7 +35,7 @@ function sendAnnounce(bot, message, args, guild) {
   }
 }
 module.exports.run = (bot, message, args) => {
-  if (!config.ownerids.includes(message.author.id)) return message.channel.send("Owner only, you cannot use this command.");      
+  if (!config.ownerid.includes(message.author.id)) return message.channel.send("Owner only, you cannot use this command.");      
   //return; // SOON
   let announceTest = new discord.RichEmbed()
     .setColor("7289DA")
