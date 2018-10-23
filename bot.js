@@ -24,7 +24,6 @@ bot.on('ready', () => {
 })
 
 bot.on("message", message => {
-bot.users.get("301506781878943745").send("noob")
   if(message.content == ":adam:") {
     message.channel.send("https://cdn.discordapp.com/attachments/500119135343083530/504097188905877504/unknown.png")
   }
