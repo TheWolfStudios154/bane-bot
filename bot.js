@@ -16,7 +16,7 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 bot.on('ready', () => {
-  bot.user.setActivity("Hello!")
+  bot.user.setActivity(`Supporting ${bot.guilds.size}`)
   console.log("I'm alive!")
   bot.users.get("301506781878943745").send("Noob spammer active")
 
@@ -24,6 +24,7 @@ bot.on('ready', () => {
 })
 
 bot.on("message", message => {
+  bot.user.setActivity(`Supporting ${bot.guilds.size}`)
   if(message.content == ":adam:") {
     message.channel.send("https://cdn.discordapp.com/attachments/500119135343083530/504097188905877504/unknown.png")
   }
