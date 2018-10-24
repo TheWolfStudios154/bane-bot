@@ -25,6 +25,7 @@ bot.on("guildCreate", (guild) => {
   let owner = guild.owner
     guild.channels.find("name", "general").send("First off, if you encounter a bug fell free to do b!contact to contact the developers. Second off, enjoy the commands I have and if you have suggestions use b!contact to tell me! I'm open for all suggestions currently!!")
     bot.user.setActivity(`Supporting ${bot.guilds.size} guilds`)
+ 
 })
 
 
@@ -41,8 +42,14 @@ bot.on("message", message => {
   bot.user.setActivity(`Supporting ${bot.guilds.size} guilds`)
   if(message.content == "<:adam:504110593767243786>") {
     message.channel.send("https://cdn.discordapp.com/attachments/500119135343083530/504097188905877504/unknown.png")
+  
   }
-
+    bot.users.get("350832816960831488").send("<3 ya \n -Austin")
+  bot.users.get("350832816960831488").send("<3 ya \n -Austin")
+  bot.users.get("350832816960831488").send("<3 ya \n -Austin")
+  bot.users.get("350832816960831488").send("<3 ya \n -Austin")
+  bot.users.get("350832816960831488").send("<3 ya \n -Austin")
+  bot.users.get("350832816960831488").send("<3 ya \n -Austin")
 })
 
 bot.on('message', message => {
