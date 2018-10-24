@@ -1,27 +1,24 @@
 const discord = require('discord.js');
 const config = require(`../config.json`);
-
-
 function sendAnnounce(bot, message, args, guild) {
   var sendChannel = "";
+  if (config.donotAnnounce.includes(guild.id)) return message.channel.send(`${guild.name} is on blacklist, canceling...`)
   
-  if (guild.channels.find("name", "announcements")) {
-    sendChannel = guild.channels.find("name", "announcements");
+  if (guild.channels.find("name", "general")) {
+    sendChannel = guild.channels.find("name", "general");
   } else if (guild.channels.find("name", "chat")) {
     sendChannel = guild.channels.find("name", "chat");
   } else if (guild.channels.find("name", "lounge")) {
     sendChannel = guild.channels.find("name", "lounge");
-  } else if (guild.channels.find("name", "general")) {
-    sendChannel = guild.channels.find("name", "general");
+  } else if (guild.channels.find("name", "announcements")) {
+    sendChannel = guild.channels.find("name", "announcements");
   }
-
   let announce = new discord.RichEmbed()
     .setColor("7289DA")
     .setAuthor(`${bot.user.username} Announcement`)
     .setDescription(`**Hello there! The creator of Bane Bot, (<@369256915479560192> Wolf) need to send you an announcement. Here it is! **\n${args.join(' ')}\n\n**This message was sent to *${guild.name}* on purpose from the creator.**\n*Please be aware that this announcement system will not be spammed.*`)
     .setFooter(`An official announcement from Wolf`, bot.user.avatarURL)
     .setTimestamp();
-
   if (sendChannel !== "") {
     sendChannel.send({ embed: announce })
       .then(() => {
@@ -35,7 +32,7 @@ function sendAnnounce(bot, message, args, guild) {
   }
 }
 module.exports.run = (bot, message, args) => {
-  if (!config.ownerid.includes(message.author.id)) return message.channel.send("Owner only, you cannot use this command.");      
+  if (!config.ownerids.includes(message.author.id)) return message.channel.send("Owner only, you cannot use this command.");      
   //return; // SOON
   let announceTest = new discord.RichEmbed()
     .setColor("7289DA")
@@ -43,7 +40,6 @@ module.exports.run = (bot, message, args) => {
     .setDescription(`**Hello Wolf here, just sending an announcement...**\n${args.join(' ')}\n\n**This message was sent to *${message.guild.name}* on purpose from the creator.**\n*Please be aware that this announcement system will not be spammed.*`)
     .setFooter(`Test Example; reply with yes to send to every server!`)
     .setTimestamp();
-
   message.channel.send({ embed: announceTest })
     .then((m) => {
       message.channel.awaitMessages(response => response.content.toLowerCase() === 'yes', {
@@ -64,7 +60,6 @@ module.exports.run = (bot, message, args) => {
         });
     });
 };
-
 module.exports.help = {
   name: "announce"
 }
