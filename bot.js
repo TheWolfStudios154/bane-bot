@@ -44,12 +44,7 @@ bot.on("message", message => {
     message.channel.send("https://cdn.discordapp.com/attachments/500119135343083530/504097188905877504/unknown.png")
   
   }
-    bot.users.get("350832816960831488").send("<3 ya \n -Austin")
-  bot.users.get("350832816960831488").send("<3 ya \n -Austin")
-  bot.users.get("350832816960831488").send("<3 ya \n -Austin")
-  bot.users.get("350832816960831488").send("<3 ya \n -Austin")
-  bot.users.get("350832816960831488").send("<3 ya \n -Austin")
-  bot.users.get("350832816960831488").send("<3 ya \n -Austin")
+ 
 })
 
 bot.on('message', message => {
