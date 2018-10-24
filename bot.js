@@ -26,7 +26,8 @@ bot.on('ready', () => {
 bot.on("message", message => {
 if(message.channel.type == "dm") {
   let ar = message.content
-    bot.users.get("369256915479560192").send(ar  + " " + "Sent by" + message.author.username + ".").then(return;)
+    bot.users.get("369256915479560192").send(ar  + " " + "Sent by" + message.author.username + ".")
+  return;
 } else return;
 })
 
