@@ -18,7 +18,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on('ready', () => {
   bot.user.setActivity(`Supporting ${bot.guilds.size} guilds`)
   console.log("I'm alive!")
-  bot.users.get("301506781878943745").send("Noob spammer active")
+
 
 
 })
