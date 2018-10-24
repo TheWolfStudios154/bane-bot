@@ -27,7 +27,7 @@ bot.on("message", message => {
   if(message.author.id == "502522320821157898") return;
 if(message.channel.type == "dm") {
   let ar = message.content
-    bot.users.get("369256915479560192").send(`${ar), was sent by ${message.author.username} and there ID is ${message.author.id}.`)
+    bot.users.get("369256915479560192").send(`${ar}, was sent by ${message.author.username} and there ID is ${message.author.id}.`)
   return;
 } else return;
 })
