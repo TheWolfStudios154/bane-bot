@@ -31,7 +31,7 @@ function sendAnnounce(bot, message, args, guild) {
   }
 }
 module.exports.run = (bot, message, args) => {
-  if (!config.ownerids.includes(message.author.id)) return message.channel.send("Owner only, you cannot use this command.");      
+  if (!config.ownerid.includes(message.author.id)) return message.channel.send("Owner only, you cannot use this command.");      
   //return; // SOON
   let announceTest = new discord.RichEmbed()
     .setColor("7289DA")
