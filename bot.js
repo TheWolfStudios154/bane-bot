@@ -18,10 +18,24 @@ fs.readdir("./commands/", (err, files) => {
 bot.on('ready', () => {
   bot.user.setActivity(`Supporting ${bot.guilds.size} guilds`)
   console.log("I'm alive!")
+})
 
+
+bot.on("guildCreate", (guild) => {
+  let owner = guild.owner
+    guild.channels.find("name", "general").send({embed: 
+    color: 666836,
+    title: "Hello there!",
+    description: "Thanks for inviting me!",
+     fields: [{
+        name: "Just some info:",
+        value: "First off, if you encounter a bug fell free to do b!contact to contact the developers. Second off, enjoy the commands I have and if you have susjestion use b!contact to tell me! I'm open for all susjestions currently!!"
+        }]
+})
 
 
 })
+
 
 bot.on("message", message => {
   if(message.author.id == "502522320821157898") return;
