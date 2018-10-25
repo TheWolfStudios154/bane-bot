@@ -8,6 +8,10 @@ module.exports.run = (bot, message, args, Discord) => {
     .setTitle("BaneBot Updates!")
     .setDescription("Heres my updates!")
     .addField("Update includes:", joinargs)
-    
+    guild.channel.find("name", "updates").send({embed: emb})
   }
+}
+
+module.exports.help = {
+  name: "createupdate"
 }
