@@ -1,4 +1,4 @@
-const config = require(../config.json)
+const config = require("../config.json")
 const ownerid = config.ownerid
 
 module.exports.run = (bot, message, args, Discord) => {
