@@ -3,12 +3,13 @@ const bot = new Discord.Client();
 const config = require("./config.json");
 const fs = require("fs");
 var prefix = "";
-
+bot.on("message", message => {
 if(message.author.id == "369256915479560192"){
   prefix = "d!"
 } else {
   prefix = "b!"
 }
+});
 bot.commands = new Discord.Collection()
 
 
