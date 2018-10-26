@@ -3,8 +3,17 @@ const bot = new Discord.Client();
 const config = require("./config.json");
 const fs = require("fs");
 var prefix = "b!";
+var developer_mode = false
 
 bot.commands = new Discord.Collection()
+
+bot.on("message", message => {
+  if(message.content == ".devemode on"){
+    if(message.author.id == "369256915479560192"){
+      let developer_mode = true
+    }
+  }
+})
 
 
 fs.readdir("./commands/", (err, files) => {
@@ -51,6 +60,7 @@ bot.on('message', message => {
   let mArray = message.content.split(" ")
   let args = mArray.slice(1)
   let cmd = bot.commands.get(mArray[0].slice(prefix.length))
+  if (developer_mode == true) return;
   if (config.ubl.includes(message.author.id)) return;
   if (!message.content.startsWith(prefix)) return;
   if (cmd) {
