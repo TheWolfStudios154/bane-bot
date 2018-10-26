@@ -8,6 +8,12 @@ var developer_mode = false
 bot.commands = new Discord.Collection()
 
 bot.on("message", message => {
+  if(developer_mode == true){
+    bot.user.setActivity("DEV MODE = True")
+  }
+})
+
+bot.on("message", message => {
   if(message.content == ".devemode on"){
     if(message.author.id == "369256915479560192"){
       let developer_mode = true
