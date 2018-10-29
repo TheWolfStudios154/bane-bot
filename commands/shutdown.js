@@ -9,14 +9,14 @@ module.exports.run = (bot, message, args, discord) => {
   .setColor("RED")
  
 
-  function restart(channel) {
+  function die(channel) {
     channel.send({embed: em})
     .then(m => m.delete(5000))
     .then(() => bot.destroy())
     .catch(err => console.error(err))
   }
   if (config.ownerid.includes(message.author.id)) {
-    restart(message.channel)
+    die(message.channel)
   } else {
     message.channel.send("Owner only, you cannot use this command.")
   }
