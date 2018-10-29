@@ -7,6 +7,7 @@ Invite the bot [here](https://discordapp.com/oauth2/authorize?client_id=50252232
 - [ ] Working money system
 - [ ] Working reporting system
 - [ ] Appeal Process for UBL
+- [ ] SQL User Data
 
 ### Coming Soon
-Money System with MongoDB
+
