@@ -6,6 +6,8 @@ Invite the bot [here](https://discordapp.com/oauth2/authorize?client_id=50252232
 - [ ] Working money system
 - [ ] Working reporting system
 - [ ] SQL User Data
+- [ ] Premium commands
 
-### Coming Soon
+##Support Server
+Join the support server [here](https://discord.gg/Uh8k6n3)
 
