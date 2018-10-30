@@ -14,6 +14,11 @@ bot.on("message", message => {
 })
 
 bot.on("message", message => {
+  if(message.content == "<@502522320821157898>") return(message.channel.send("My prefix is b!"))
+
+})
+
+bot.on("message", message => {
   if(message.content == ".devemode on"){
     if(message.author.id == "369256915479560192"){
       let developer_mode = true
