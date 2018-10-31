@@ -2,12 +2,12 @@
 "001": {
       "name": "Sharp Sword",
       "damange": "15",
-      "ID": "001" }
+      "ID": "001" },
 "002": {
       "name": "FHG",
       "damage": "5000",
       "description": "The person who inspired me to learn more discord.js",
-      "ID": "002"}
+      "ID": "002"},
 "003": {
       "name": "Baseball Bat",
       "damange": "10",
