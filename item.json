@@ -1,1 +1,20 @@
-{"369256915479560192"{"Rank":"Developer", "purrfect":"yes"}}
+{
+"001": {
+      "name": "Sharp Sword",
+      "damange": "15",
+      "ID": "001" }
+"002": {
+      "name": "FHG",
+      "damage": "5000",
+      "description": "The person who inspired me to learn more discord.js",
+      "ID": "002"}
+"003": {
+      "name": "Baseball Bat",
+      "damange": "10",
+      "id": "003"}
+
+
+
+}
+
+
