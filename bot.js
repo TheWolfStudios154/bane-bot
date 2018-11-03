@@ -44,8 +44,8 @@ bot.on('ready', () => {
 
 bot.on("guildCreate", (guild) => {
   let owner = guild.owner
-    guild.channels.find("name", "general").send("First off, if you encounter a bug fell free to do b!contact to contact the developers. Second off, enjoy the commands I have and if you have suggestions use b!contact to tell me! I'm open for all suggestions currently!!")
-    guild.channels.find("name", "lobby").send("First off, if you encounter a bug fell free to do b!contact to contact the developers. Second off, enjoy the commands I have and if you have suggestions use b!contact to tell me! I'm open for all suggestions currently!!") 
+    guild.channels.find("name", "announcements").send("First off, if you encounter a bug fell free to do b!contact to contact the developers. Second off, enjoy the commands I have and if you have suggestions use b!contact to tell me! I'm open for all suggestions currently!!")
+    guild.channels.find("name", "general").send("First off, if you encounter a bug fell free to do b!contact to contact the developers. Second off, enjoy the commands I have and if you have suggestions use b!contact to tell me! I'm open for all suggestions currently!!") 
     bot.user.setActivity(`Supporting ${bot.guilds.size} guilds`)
  
 })
@@ -62,7 +62,7 @@ if(message.channel.type == "dm") {
 
 bot.on("message", message => {
   bot.user.setActivity(`Supporting ${bot.guilds.size} guilds`)
-  if(message.content == "<:adam:504110593767243786>") {
+  if(message.content == ":adam:") {
     message.channel.send("https://cdn.discordapp.com/attachments/500119135343083530/504097188905877504/unknown.png")
   
   }
