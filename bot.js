@@ -8,26 +8,12 @@ var developer_mode = false
 
 bot.commands = new Discord.Collection()
 
-bot.on("message", message => {
-  if(developer_mode == true){
-    bot.user.setActivity("DEV MODE = True")
-  }
-})
+
 
 bot.on("message", message => {
   if(message.content == "<@502522320821157898>") return(message.channel.send("My prefix is b!"))
 
 })
-
-bot.on("message", message => {
-  if(message.content == ".devemode on"){
-    if(message.author.id == "369256915479560192"){
-      let developer_mode = true
-    }
-  }
-})
-
-
 fs.readdir("./commands/", (err, files) => {
   console.log("Loading commands...");
   if (err) return console.log(`Command loading failed!`);
@@ -35,23 +21,16 @@ fs.readdir("./commands/", (err, files) => {
     bot.commands.set(require(`./commands/${f}`).help.name, require(`./commands/${f}`));
   });
 });
-
 bot.on('ready', () => {
   bot.user.setActivity(`Supporting ${bot.guilds.size} guilds`)
   console.log("I'm alive!")
 })
-
-
 bot.on("guildCreate", (guild) => {
   let owner = guild.owner
     guild.channels.find("name", "announcements").send("First off, if you encounter a bug fell free to do b!contact to contact the developers. Second off, enjoy the commands I have and if you have suggestions use b!contact to tell me! I'm open for all suggestions currently!!")
     guild.channels.find("name", "general").send("First off, if you encounter a bug fell free to do b!contact to contact the developers. Second off, enjoy the commands I have and if you have suggestions use b!contact to tell me! I'm open for all suggestions currently!!") 
-    bot.user.setActivity(`Supporting ${bot.guilds.size} guilds`)
- 
-})
-
-
-bot.on("message", message => {
+    bot.user.setActivity(`Supporting ${bot.guilds.size} guilds`) 
+})bot.on("message", message => {
   if(message.author.id == "502522320821157898") return;
 if(message.channel.type == "dm") {
   let ar = message.content
@@ -59,7 +38,6 @@ if(message.channel.type == "dm") {
   return;
 } else return;
 })
-
 bot.on("message", message => {
   bot.user.setActivity(`Supporting ${bot.guilds.size} guilds`)
   if(message.content == ":adam:") {
