@@ -31,7 +31,8 @@ bot.on("guildCreate", (guild) => {
     guild.channels.find("name", "announcements").send("First off, if you encounter a bug fell free to do b!contact to contact the developers. Second off, enjoy the commands I have and if you have suggestions use b!contact to tell me! I'm open for all suggestions currently!!")
     guild.channels.find("name", "general").send("First off, if you encounter a bug fell free to do b!contact to contact the developers. Second off, enjoy the commands I have and if you have suggestions use b!contact to tell me! I'm open for all suggestions currently!!") 
     bot.user.setActivity(`Supporting ${bot.guilds.size} guilds`) 
-})bot.on("message", message => {
+})
+bot.on("message", message => {
   if(message.author.id == "502522320821157898") return;
 if(message.channel.type == "dm") {
   let ar = message.content
