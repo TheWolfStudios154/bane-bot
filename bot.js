@@ -1,9 +1,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const config = require("./config.json");
-const beta = require("./beta.json")
 const fs = require("fs");
-const item = require("./item.json")
 var prefix = "b!";
 var developer_mode = false
 
