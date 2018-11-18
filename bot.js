@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const config = require("./config.json");
 const fs = require("fs");
+const mongoose = require('mongoose');
 var prefix = "b!";
 var developer_mode = false
 
